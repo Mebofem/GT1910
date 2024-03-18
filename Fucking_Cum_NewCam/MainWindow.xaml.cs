@@ -14,7 +14,7 @@ namespace Fucking_Cum_NewCam
         private Vimba _vimba;
         private Camera _camera;
         private Frame[] _frameArray;
-        private bool _acquiring; // To keep track if we are still acquiring images
+        private bool _acquiring; 
 
         public MainWindow()
         {
@@ -103,7 +103,7 @@ namespace Fucking_Cum_NewCam
 
         private void OnFrameReceived(Frame frame)
         {
-            if (!_acquiring) return; // Exit if we are no longer acquiring
+            if (!_acquiring) return; 
 
             Dispatcher.BeginInvoke(new Action(() =>
             {
@@ -139,7 +139,7 @@ namespace Fucking_Cum_NewCam
         {
             if (_camera != null)
             {
-                _acquiring = false; // Indicate that we are no longer acquiring before stopping the camera
+                _acquiring = false; 
 
                 try
                 {
